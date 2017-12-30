@@ -4,6 +4,16 @@
 
 	<head>
 
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-111729830-1"></script>
+		<script>
+  		window.dataLayer = window.dataLayer || [];
+  		function gtag(){dataLayer.push(arguments);}
+  			gtag('js', new Date());
+
+  			gtag('config', 'UA-111729830-1');
+	</script>
+
 		<meta property="og:image" content="https://pacman-e281c.firebaseapp.com/img/preview.png">
 		<meta property="og:url" content="https://pacman-e281c.firebaseapp.com/">
 		<meta property="og:description" content="Made by Giuseppe Sollazzo, adapting the Pac Man HTML5 app made by Lucio Panepinto.">
@@ -176,7 +186,11 @@
 
 	<body>
 		<img id="source" src="img/jeremyLEFT.png" style="display: none;"/>
-		<img id="source2" src="img/corbynLEFT.png" style="display: none;"/>
+		<img id="sourceJezza" src="img/corbynLEFT.png" style="display: none;"/>
+		<img id="sourceTerry" src="img/terryLEFT.png" style="display: none;"/>
+		<img id="sourceDeedee" src="img/deedeeLEFT.png" style="display: none;"/>
+		<img id="sourceBlondey" src="img/blondeyLEFT.png" style="display: none;"/>
+		<img id="sourceHoward" src="img/howardLEFT.png" style="display: none;"/>
 		<div id="sound"></div>
 
 		<div id="help">
@@ -195,14 +209,14 @@
 
 		<div id="home">
 			<h1>pacs-man</h1>
-			<h3>Giuseppe SOLLAZZO <a href="http://twitter.com/puntofisso">@puntofisso</a><br><em>2017</em></h3>
+			<h3><a href="https://github.com/puntofisso/pacsman">Credits</a><br><em>2017</em></h3>
 			<!--canvas id="canvas-home-title-pacman"></canvas-->
 			<div id="presentation">
-				<div id="presentation-titles">character &nbsp;/&nbsp; nickname</div>
-				<canvas id="canvas-presentation-blinky"></canvas><div id="presentation-character-blinky">- jezza</div><div id="presentation-name-blinky">"blinky"</div>
-				<canvas id="canvas-presentation-pinky"></canvas><div id="presentation-character-pinky">- speedy</div><div id="presentation-name-pinky">"pinky"</div>
-				<canvas id="canvas-presentation-inky"></canvas><div id="presentation-character-inky">- bashful</div><div id="presentation-name-inky">"inky"</div>
-				<canvas id="canvas-presentation-clyde"></canvas><div id="presentation-character-clyde">- pokey</div><div id="presentation-name-clyde">"clyde"</div>
+				<div id="presentation-titles">characters</div>
+				<canvas id="canvas-presentation-pinky"></canvas><div id="presentation-character-pinky">terry</div><!--div id="presentation-name-blinky">"blinky"</div-->
+				<canvas id="canvas-presentation-blinky"></canvas><div id="presentation-character-blinky">jezza</div><!--div id="presentation-name-pinky">"pinky"</div-->
+				<canvas id="canvas-presentation-inky"></canvas><div id="presentation-character-inky">deedee</div><!--div id="presentation-name-inky">"inky"</div-->
+				<canvas id="canvas-presentation-clyde"></canvas><div id="presentation-character-clyde">blondey</div><!--div id="presentation-name-clyde">"clyde"</div-->
 			</div>
 			<canvas id="trailer"></canvas>
 			<div class="help-button">- help -</div>

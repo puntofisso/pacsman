@@ -97,7 +97,8 @@ function initHome() {
 	ctx.fillStyle = GHOST_BLINKY_COLOR;
 	//drawHelperGhost(ctx, 25, 25, 1, 0, 0, 0);
 
-	drawCorbynGhost(true, ctx, 5, 5, 1, 0, 0, 0);
+	//drawCorbynGhost(true, ctx, 5, 5, 1, 0, 0, 0);
+	drawCorbynGhost('jezza', ctx, 5, 5, 1, 0, 0, 0);
 
 	canvas = document.getElementById('canvas-presentation-pinky');
 	canvas.setAttribute('width', '50');
@@ -105,9 +106,11 @@ function initHome() {
 	if (canvas.getContext) {
 		ctx = canvas.getContext('2d');
 	}
-	ctx.fillStyle = GHOST_PINKY_COLOR;
-	drawHelperGhost(ctx, 25, 25, 1, 0, 0, 0);
 
+
+	ctx.fillStyle = GHOST_PINKY_COLOR;
+	//drawHelperGhost(ctx, 25, 25, 1, 0, 0, 0);
+	drawCorbynGhost('terry', ctx, 5, 5, 1, 0, 0, 0);
 	canvas = document.getElementById('canvas-presentation-inky');
 	canvas.setAttribute('width', '50');
 	canvas.setAttribute('height', '50');
@@ -115,8 +118,8 @@ function initHome() {
 		ctx = canvas.getContext('2d');
 	}
 	ctx.fillStyle = GHOST_INKY_COLOR;
-	drawHelperGhost(ctx, 25, 25, 1, 0, 0, 0);
-
+	// drawHelperGhost(ctx, 25, 25, 1, 0, 0, 0);
+	drawCorbynGhost('deedee', ctx, 5, 5, 1, 0, 0, 0);
 	canvas = document.getElementById('canvas-presentation-clyde');
 	canvas.setAttribute('width', '50');
 	canvas.setAttribute('height', '50');
@@ -124,7 +127,9 @@ function initHome() {
 		ctx = canvas.getContext('2d');
 	}
 	ctx.fillStyle = GHOST_CLYDE_COLOR;
-	drawHelperGhost(ctx, 25, 25, 1, 0, 0, 0);
+	//drawHelperGhost(ctx, 25, 25, 1, 0, 0, 0);
+	drawCorbynGhost('blondey', ctx, 5, 5, 1, 0, 0, 0);
+
 
 	startPresentation();
 }
@@ -300,7 +305,7 @@ function getGhostsTrailerCanevasContext() {
 	return PACMAN_TRAILER_CANVAS_CONTEXT;
 }
 function drawGhostsTrailer() {
-	
+
 	var ctx = getGhostsTrailerCanevasContext();
 
 	if (GHOST_BLINKY_TRAILER_STATE === 1) {
