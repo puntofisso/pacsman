@@ -23,7 +23,7 @@
 }
 
 html, body {
-	margin: 0px 0px 0px 0px;
+	margin: -20px 0px 0px 0px;
 	padding: 0px 0px 0px 0px;
 	width: 100%;
 	height: 100%;
@@ -41,6 +41,7 @@ body {
 	display: inline;
 	top: 70px;
 	margin: 0px;
+	margin-left:50px;
 	padding: 0px;
 	width: 160px;
 }
@@ -118,7 +119,7 @@ span.combo, span.fruits {
 
 #canvas-lifes, #canvas-level-fruits {
 	height: 30px;
-	top: 670px;
+	/* top: 670px; */
 	position: absolute;
 	z-index: 111111;
 }
@@ -136,7 +137,7 @@ span.combo, span.fruits {
 	margin: auto;
 	left: 0px;
 	right: 0px;
-	bottom: -145px;
+	bottom: 145px;
 	width: 550px;
 	height: 140px;
 	background-color: #666;
@@ -197,7 +198,8 @@ span.combo, span.fruits {
 	z-index: 999999;
 }
 #control-up-big {
-	bottom: 10px;
+	/* bottom: 10px; */
+	bottom: 70px;
 	left: 0px;
 	right: 0px;
 	width: 125px;
@@ -205,7 +207,8 @@ span.combo, span.fruits {
 	background-image: url('../img/move-up-big.png');
 }
 #control-down-big {
-	bottom: -120px;
+	/* bottom: -120px; */
+	bottom: -50px;
 	left: 0px;
 	right: 0px;
 	width: 125px;
@@ -214,14 +217,16 @@ span.combo, span.fruits {
 }
 #control-left-big {
 	left: 80px;
-	bottom: -90px;
+	/* bottom: -90px; */
+	bottom: -10px;
 	width: 125px;
 	height: 175px;
 	background-image: url('../img/move-left-big.png');
 }
 #control-right-big {
 	right: 80px;
-	bottom: -90px;
+	/* bottom: -90px; */
+	bottom: -10px;
 	width: 125px;
 	height: 175px;
 	background-image: url('../img/move-right-big.png');
@@ -230,9 +235,10 @@ span.combo, span.fruits {
 
 
 h1 {
-	margin: 0px 0px 74px 0px;
+	margin: 80px 0px 74px 0px;
 	padding: 0px;
-	font-size: 24px;
+	/* font-size: 24px; */
+	font-size: 16px;
 	letter-spacing: 3px;
 	color: #fff;
 	text-transform: uppercase;
@@ -267,6 +273,21 @@ h3 {
 	position: absolute;
 	bottom: 0px;
 	left: 5px;
+}
+
+.credits-button {
+	position: absolute;
+	text-align: center;
+	bottom: 8px;
+	right: 55px;
+	margin: auto;
+	font-size: 14px;
+	font-weight: bold;
+	text-transform: lowercase;
+	letter-spacing: 0.5px;
+	cursor: pointer;
+	color: #78abf7;
+	transition: color 1.5s;
 }
 
 .help-button {
@@ -349,9 +370,9 @@ h3 {
 		zoom: 135%;
 	}
 }
-
+/*removed #sound, .sound */
 @media screen and (max-width:1024px), screen and (min-device-width : 768px) and (max-device-width : 1024px) {
-	#home .help-button, #panel .help-button, #home .github, #sound, .sound {
+	#home .help-button, #panel .help-button, #home .github, {
 		display: none;
 	}
 	#panel, #home {
@@ -369,11 +390,12 @@ h3 {
 	#control-up-big, #control-down-big, #control-left-big, #control-right-big {
 		display: inline;
 	}
-	#home .help-button, #panel .help-button, #home .github, #sound, .sound {
+	/*removed #sound, .sound */
+	#home .help-button, #panel .help-button, #home .github{
 		display: none;
 	}
 	h1, #canvas-panel-title-pacman {
-		visibility: hidden;
+		/* visibility: hidden;  */
 	}
 }
 @media screen and (max-height:480px), screen and (min-device-height : 320px) and (max-device-height : 480px) {
@@ -383,7 +405,8 @@ h3 {
 	#control-up-big, #control-down-big, #control-left-big, #control-right-big {
 		display: inline;
 	}
-	h1, #canvas-panel-title-pacman, #control-up-second, #control-down-second, #home .help-button, #panel .help-button, #home .github, #sound, .sound {
+	/*removed #sound, .sound */
+	h1, #canvas-panel-title-pacman, #control-up-second, #control-down-second, #home .help-button, #panel .help-button, #home .github,  {
 		display: none;
 	}
 	#score, #highscore {

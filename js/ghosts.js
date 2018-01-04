@@ -66,6 +66,7 @@ var GHOST_EAT_TIME = 5500;
 var GHOST_BODY_STATE_MAX = 6;
 
 function initGhosts() {
+
 	initGhost('pinky');
 	initGhost('blinky');
 
@@ -153,25 +154,19 @@ function drawGhost(ghost) {
 		}
 	}
 	// eval('drawHelperGhost(ctx, GHOST_' + ghost.toUpperCase() + '_POSITION_X, GHOST_' + ghost.toUpperCase() + '_POSITION_Y, GHOST_' + ghost.toUpperCase() + '_DIRECTION, GHOST_' + ghost.toUpperCase() + '_BODY_STATE, GHOST_' + ghost.toUpperCase() + '_STATE, GHOST_' + ghost.toUpperCase() + '_AFFRAID_STATE)');
-isCorbs=false;
-
-
 who_is = "";
 
 if (ghost.toUpperCase() === 'BLINKY') {
-	isCorbs=true;
 	who_is="jezza";
 } else if (ghost.toUpperCase() === 'PINKY') {
-	isCorbs=true;
 	who_is="terry";
 } else if (ghost.toUpperCase() === 'INKY') {
-	isCorbs=true;
 	who_is="blondey";
 } else if (ghost.toUpperCase() === 'CLYDE') {
-	isCorbs=true;
 	who_is="deedee";
 }
-eval('drawCorbynGhost(who_is, ctx, GHOST_' + ghost.toUpperCase() + '_POSITION_X, GHOST_' + ghost.toUpperCase() + '_POSITION_Y, GHOST_' + ghost.toUpperCase() + '_DIRECTION, GHOST_' + ghost.toUpperCase() + '_BODY_STATE, GHOST_' + ghost.toUpperCase() + '_STATE, GHOST_' + ghost.toUpperCase() + '_AFFRAID_STATE)');
+// eval('drawCorbynGhost(who_is, ctx, GHOST_' + ghost.toUpperCase() + '_POSITION_X-15, GHOST_' + ghost.toUpperCase() + '_POSITION_Y-15, GHOST_' + ghost.toUpperCase() + '_DIRECTION, GHOST_' + ghost.toUpperCase() + '_BODY_STATE, GHOST_' + ghost.toUpperCase() + '_STATE, GHOST_' + ghost.toUpperCase() + '_AFFRAID_STATE)');
+eval('drawCorbynGhost(who_is, ctx, GHOST_' + ghost.toUpperCase() + '_POSITION_X-25, GHOST_' + ghost.toUpperCase() + '_POSITION_Y-25, GHOST_' + ghost.toUpperCase() + '_DIRECTION, GHOST_' + ghost.toUpperCase() + '_BODY_STATE, GHOST_' + ghost.toUpperCase() + '_STATE, GHOST_' + ghost.toUpperCase() + '_AFFRAID_STATE)');
 
 
 
@@ -495,9 +490,12 @@ function reverseDirection(direction) {
 function eraseGhost(ghost) {
 
 	var ctx = getGhostCanevasContext(ghost);
+	eval('ctx.clearRect(GHOST_' + ghost.toUpperCase() + '_POSITION_X - 26, GHOST_' + ghost.toUpperCase() + '_POSITION_Y - 26, 102, 102)');
 
-	eval('ctx.clearRect(GHOST_' + ghost.toUpperCase() + '_POSITION_X - 17, GHOST_' + ghost.toUpperCase() + '_POSITION_Y - 17, 34, 34)');
-	eval('ctx.clearRect(GHOST_' + ghost.toUpperCase() + '_POSITION_X , GHOST_' + ghost.toUpperCase() + '_POSITION_Y , 30, 30)');
+	 // eval('ctx.clearRect(GHOST_' + ghost.toUpperCase() + '_POSITION_X - 17, GHOST_' + ghost.toUpperCase() + '_POSITION_Y - 17, 34, 34)');
+
+// eval('ctx.clearRect(GHOST_' + ghost.toUpperCase() + '_POSITION_X , GHOST_' + ghost.toUpperCase() + '_POSITION_Y , 30, 30)');
+
 }
 function eraseGhosts() {
 
@@ -621,7 +619,7 @@ function resumeGhosts() {
 function drawCorbynGhost(who_is, ctx, x, y, d, b, s, a) {
 	// if (isCorbs) {
 
-	// TODO can you manage direction in here?
+	// TODO can you manage direction in here --> d = direction
 	if (!(s === 0 || s === -1)) {
 		// drawHelperGhost(ctx, x, y, d, b, s, a);
 		var img=document.getElementById("sourceHoward");

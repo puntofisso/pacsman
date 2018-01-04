@@ -98,7 +98,7 @@ function initHome() {
 	//drawHelperGhost(ctx, 25, 25, 1, 0, 0, 0);
 
 	//drawCorbynGhost(true, ctx, 5, 5, 1, 0, 0, 0);
-	drawCorbynGhost('jezza', ctx, 5, 5, 1, 0, 0, 0);
+	drawCorbynGhost('jezza', ctx, 5, 0, 1, 0, 0, 0);
 
 	canvas = document.getElementById('canvas-presentation-pinky');
 	canvas.setAttribute('width', '50');
@@ -110,7 +110,7 @@ function initHome() {
 
 	ctx.fillStyle = GHOST_PINKY_COLOR;
 	//drawHelperGhost(ctx, 25, 25, 1, 0, 0, 0);
-	drawCorbynGhost('terry', ctx, 5, 5, 1, 0, 0, 0);
+	drawCorbynGhost('terry', ctx, 5, 0, 1, 0, 0, 0);
 	canvas = document.getElementById('canvas-presentation-inky');
 	canvas.setAttribute('width', '50');
 	canvas.setAttribute('height', '50');
@@ -119,7 +119,7 @@ function initHome() {
 	}
 	ctx.fillStyle = GHOST_INKY_COLOR;
 	// drawHelperGhost(ctx, 25, 25, 1, 0, 0, 0);
-	drawCorbynGhost('deedee', ctx, 5, 5, 1, 0, 0, 0);
+	drawCorbynGhost('deedee', ctx, 5, 0, 1, 0, 0, 0);
 	canvas = document.getElementById('canvas-presentation-clyde');
 	canvas.setAttribute('width', '50');
 	canvas.setAttribute('height', '50');
@@ -128,7 +128,7 @@ function initHome() {
 	}
 	ctx.fillStyle = GHOST_CLYDE_COLOR;
 	//drawHelperGhost(ctx, 25, 25, 1, 0, 0, 0);
-	drawCorbynGhost('blondey', ctx, 5, 5, 1, 0, 0, 0);
+	drawCorbynGhost('blondey', ctx, 5, 0, 1, 0, 0, 0);
 
 
 	startPresentation();
