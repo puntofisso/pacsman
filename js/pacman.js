@@ -7,8 +7,7 @@ var PACMAN_POSITION_Y = 416;
 var PACMAN_POSITION_STEP = 2;
 var PACMAN_MOUNTH_STATE = 3;
 var PACMAN_MOUNTH_STATE_MAX = 6;
-//var PACMAN_SIZE = 16;
-var PACMAN_SIZE = 50;
+var PACMAN_SIZE = 16;
 var PACMAN_MOVING = false;
 var PACMAN_MOVING_TIMER = -1;
 var PACMAN_MOVING_SPEED = 15;
@@ -20,7 +19,8 @@ var PACMAN_KILLING_TIMER = -1;
 var PACMAN_KILLING_SPEED = 70;
 var PACMAN_RETRY_SPEED = 2100;
 var PACMAN_DEAD = false;
-
+var PACMAN_SHIFT = 17
+;
 function initPacman() {
 	var canvas = document.getElementById('canvas-pacman');
 	canvas.setAttribute('width', '550');
@@ -212,22 +212,20 @@ function drawPacman() {
 
 	var ctx = getPacmanCanevasContext();
 	var img=document.getElementById("source");
-	if (PACMAN_DIRECTION === 3) {
-		img.src = 'img/jeremyLEFT.png';
-	} else if (PACMAN_DIRECTION === 1) {
+	if (PACMAN_DIRECTION === 1) {
 		img.src = 'img/jeremyRIGHT.png';
-	} else {
+	} else  {
 		img.src = 'img/jeremyLEFT.png';
 	}
 
-	// ctx.drawImage(img, PACMAN_POSITION_X-15,PACMAN_POSITION_Y-15);
-	ctx.drawImage(img, PACMAN_POSITION_X-25,PACMAN_POSITION_Y-25);
+	//ctx.drawImage(img, PACMAN_POSITION_X - PACMAN_SIZE/2,PACMAN_POSITION_Y-PACMAN_SIZE/2);
+	ctx.drawImage(img, PACMAN_POSITION_X - PACMAN_SIZE/2 - PACMAN_SHIFT,PACMAN_POSITION_Y-PACMAN_SIZE/2 - PACMAN_SHIFT);
 }
 
 function erasePacman() {
 	var ctx = getPacmanCanevasContext();
-	// ctx.clearRect( (PACMAN_POSITION_X - 14) - PACMAN_SIZE, (PACMAN_POSITION_Y - 14) - PACMAN_SIZE, (PACMAN_SIZE * 2) + 7, (PACMAN_SIZE * 2) + 7);
-	ctx.clearRect(PACMAN_POSITION_X - 26, PACMAN_POSITION_Y - 26, 102, 102);
+	// ctx.clearRect( (PACMAN_POSITION_X - 2) - PACMAN_SIZE, (PACMAN_POSITION_Y - 2) - PACMAN_SIZE, (PACMAN_SIZE * 2) + 5, (PACMAN_SIZE * 2) + 5);
+	ctx.clearRect( (PACMAN_POSITION_X - 2) - PACMAN_SIZE/2 - PACMAN_SHIFT, (PACMAN_POSITION_Y - 2) - PACMAN_SIZE/2 - PACMAN_SHIFT, (PACMAN_SIZE + PACMAN_SHIFT) *2 , (PACMAN_SIZE + PACMAN_SHIFT) *2);
 }
 
 function killPacman() {
@@ -288,9 +286,7 @@ function testFruitsPacman() {
 	}
 }
 function testBubblesPacman() {
-	// TODO bug here? *2 or not?
-	var r = { x: PACMAN_POSITION_X , y: PACMAN_POSITION_Y , width:  PACMAN_SIZE  , height: PACMAN_SIZE  };
-
+	var r = { x: PACMAN_POSITION_X - ( PACMAN_SIZE / 2 ), y: PACMAN_POSITION_Y - ( PACMAN_SIZE / 2 ) , width: ( PACMAN_SIZE * 2 ), height: ( PACMAN_SIZE * 2 ) };
 	for (var i = 0, imax = BUBBLES_ARRAY.length; i < imax; i ++) {
 		var bubble = BUBBLES_ARRAY[i];
 
@@ -317,7 +313,6 @@ function testBubblesPacman() {
 					playEatingSound();
 				}
 				BUBBLES_COUNTER --;
-				
 				if ( BUBBLES_COUNTER === 0 ) {
 					win();
 				}

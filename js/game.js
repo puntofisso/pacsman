@@ -49,7 +49,7 @@ function initGame(newgame) {
 		$("#panel").show();
 
 		var ctx = null;
-		var canvas = document.getElementById('canvas-panel-title-pacman');
+		// var canvas = document.getElementById('canvas-panel-title-pacman');
 		// canvas.setAttribute('width', '38');
 		// canvas.setAttribute('height', '32');
 		// if (canvas.getContext) {
