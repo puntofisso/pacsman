@@ -39,7 +39,8 @@ body {
 #score, #highscore  {
 	position: absolute;
 	display: inline;
-	top: 70px;
+	/* top: 70px; */
+	top: 0px;
 	margin: 0px;
 	margin-left:50px;
 	padding: 0px;
@@ -69,7 +70,7 @@ body {
 #message {
 	position: absolute;
 	display: inline;
-	top: 413px;
+	top: 473px;
 	left: 180px;
 	margin: 0px;
 	padding: 0px;
@@ -199,7 +200,7 @@ span.combo, span.fruits {
 }
 #control-up-big {
 	/* bottom: 10px; */
-	bottom: 70px;
+	bottom: 90px;
 	left: 0px;
 	right: 0px;
 	width: 125px;
@@ -208,7 +209,7 @@ span.combo, span.fruits {
 }
 #control-down-big {
 	/* bottom: -120px; */
-	bottom: -50px;
+	bottom: -30px;
 	left: 0px;
 	right: 0px;
 	width: 125px;
@@ -218,7 +219,7 @@ span.combo, span.fruits {
 #control-left-big {
 	left: 80px;
 	/* bottom: -90px; */
-	bottom: -10px;
+	bottom: -30px;
 	width: 125px;
 	height: 175px;
 	background-image: url('../img/move-left-big.png');
@@ -226,7 +227,7 @@ span.combo, span.fruits {
 #control-right-big {
 	right: 80px;
 	/* bottom: -90px; */
-	bottom: -10px;
+	bottom: -30px;
 	width: 125px;
 	height: 175px;
 	background-image: url('../img/move-right-big.png');
@@ -235,7 +236,8 @@ span.combo, span.fruits {
 
 
 h1 {
-	margin: 80px 0px 74px 0px;
+	/* margin: 80px 0px 74px 0px; */
+	margin: 0px 0px 30px 0px;
 	padding: 0px;
 	/* font-size: 24px; */
 	font-size: 16px;
@@ -265,7 +267,8 @@ h3 {
 	right: 5px;
 }
 #panel .sound {
-	top: 77px;
+	/* top: 77px; */
+	top: 7px;
 	right: 5px;
 }
 
@@ -308,7 +311,8 @@ h3 {
 	color: #333;
 }
 #panel .help-button {
-	top: -510px;
+	/* top: -510px; */
+	top: -600px; 
 	height: 25px;
 }
 
@@ -364,10 +368,10 @@ h3 {
 }
 
 
-
 @media screen and (min-height:1200px), screen and (min-device-height : 1200px) {
 	#panel, #home {
-		zoom: 135%;
+		/* zoom: 135%; */
+		zoom: 55%;
 	}
 }
 /*removed #sound, .sound */
@@ -376,13 +380,25 @@ h3 {
 		display: none;
 	}
 	#panel, #home {
-		zoom: 105%;
+		/* zoom: 105%; */
+		zoom: 55%;
 	}
 	#control-up-big, #control-down-big, #control-left-big, #control-right-big {
 		display: inline;
 	}
 
 }
+
+/* ipad */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px) {
+	#panel, #home {
+		/* zoom: 105%; */
+		zoom: 130%;
+	}
+}
+
 @media screen and (max-height:640px), screen and (min-device-height : 480px) and (max-device-height : 640px) and (-webkit-device-pixel-ratio: 3) {
 	#panel, #home {
 		zoom: 60%;
@@ -392,7 +408,7 @@ h3 {
 	}
 	/*removed #sound, .sound */
 	#home .help-button, #panel .help-button, #home .github{
-		display: none;
+		/* display: none; */
 	}
 	h1, #canvas-panel-title-pacman {
 		/* visibility: hidden;  */

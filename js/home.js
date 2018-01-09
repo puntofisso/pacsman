@@ -96,7 +96,6 @@ function initHome() {
 	}
 	ctx.fillStyle = GHOST_BLINKY_COLOR;
 	//drawHelperGhost(ctx, 25, 25, 1, 0, 0, 0);
-
 	//drawCorbynGhost(true, ctx, 5, 5, 1, 0, 0, 0);
 	drawCorbynGhost('jezza', ctx, 5, 0, 1, 0, 0, 0);
 

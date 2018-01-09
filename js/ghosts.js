@@ -617,9 +617,8 @@ function resumeGhosts() {
 }
 
 function drawCorbynGhost(who_is, ctx, x, y, d, b, s, a) {
-	// if (isCorbs) {
 
-	// TODO can you manage direction in here --> d = direction
+	// TODO manage direction in here --> d = direction
 	if (!(s === 0 || s === -1)) {
 		// drawHelperGhost(ctx, x, y, d, b, s, a);
 		var img=document.getElementById("sourceHoward");
@@ -638,10 +637,7 @@ function drawCorbynGhost(who_is, ctx, x, y, d, b, s, a) {
 		var img=document.getElementById("sourceBlondey");
 		ctx.drawImage(img, x, y);
 	}
-	/*else {
-	*	drawHelperGhost(ctx, x, y, d, b, s, a);
-	*}
-	*/
+	
 }
 
 
